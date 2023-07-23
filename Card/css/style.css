@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: rgb(22, 25, 58);
+}
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(57, 177, 233),rgb(223, 42, 168));
+    clip-path: circle(20% at 20% 10%);
+}
+
+body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(6, 116, 88),rgb(223, 42, 168));
+    clip-path: circle(30% at right 80%);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(233, 142, 24), rgb(240, 34, 85));
+    clip-path: circle(8% at 71% 50%);
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(24, 233, 181), rgb(123, 34, 240));
+    clip-path: circle(3% at 38% 44%);
+}
+.card{
+    z-index: 1;
+    width: 90%;
+    max-width: 440px;
+    /* background-color: rgba(255,255,255,0.1); */
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 10px;
+    padding:  50px 20px;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.card .dp{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 0 30px;
+}
+.card h2{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.card p{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0 10px;
+}
+.links a img{
+    transition: background-color .3s ease-in;
+    width: 50px;
+    height: 50px;
+    margin: 10px 5px;
+    border-radius: 50%;
+}
+.links a img:hover{
+    background-color: #d524aa;
+}
+.mm{
+    text-decoration: none;
+    color: #d524aa;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: white;
+    padding: 15px 40px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
