@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+    /* background-color: rgb(22, 25, 58); */
+    background-color: black;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(57, 177, 233), rgb(223, 42, 168));
+    clip-path: circle(20% at 20% 10%);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(6, 116, 88), rgb(223, 42, 168));
+    clip-path: circle(30% at right 80%);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(233, 142, 24), rgb(240, 34, 85));
+    clip-path: circle(8% at 71% 50%);
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(24, 233, 181), rgb(123, 34, 240));
+    clip-path: circle(3% at 38% 44%);
+}
+.card{
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 2;
+    padding: 10px;
+}
+.card .twitted-user-img{
+    object-fit: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 10%;
+}
+.upper-sec{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.twitted-user-info{
+    width: 80%;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 0 3px;
+}
+.logo{
+    width: 20%;
+    text-align: right;
+}
+.tick{
+    height: 10px;
+    margin-left: 3px;
+}
+.user-name{
+    text-decoration: none;
+    color: black;
+}
+.user-name:hover,
+.follow:hover,
+.user-at:hover,
+.content-sec p:first-child a:hover{
+    text-decoration: underline;
+}
+.name-tick{
+    display: flex;
+    align-items: center;
+}
+.user-links a{
+    text-decoration: none;
+}
+.user-at{
+    font-size: 0.9em;
+    font-weight: 500;
+    color: gray;
+}
+.follow{
+    color: #0084ff;
+}
+.content-sec{
+    font-size: 0.8em;
+}
+.content-sec a{
+    display: block;
+    text-decoration: none;
+    color: #0084ff;
+}
+.reply{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    transition: background-color .2s ease;
+}
+.reply:hover{
+    background-color: rgba(82, 82, 82, 0.1);
+}
+.reply-upper-sec{
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.reply-user-name{
+    color: black!important;
+    font-weight: bold;
+}
+.twitted-reply-user-img{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.reply-user-at{
+    color: gray!important;
+    margin-left: 5px;
+}
+.reply-content ol li{
+    list-style-position: inside;
+}
+.time-date-sec{
+    color: gray;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.excla{
+    margin-right: 10px;
+    font-size: 10px;
+}
+.warning{
+    height: 15px;
+    rotate: 180deg;
+    filter: invert(45%);
+}
+.heart-icon{
+    margin: 10px 0 0;
+}
+.heart-icon div p:nth-child(2){
+    margin-left: 20px;
+}
+.heart-icon div{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+.fa-heart{
+    margin-right: 5px;
+    color: red;
+}
+.fa-bolt-lightning{
+    margin-right: 5px;
+    color: black;
+}
+.heart-icon a{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+    color: #0084ff;
+    font-weight: bold;
+    transition: background-color .2s ease;
+}
+.heart-icon a:hover{
+    background: #0084ff0c;
+}
+.reply:hover,.heart-icon:hover,.time-date-sec:hover{
+    cursor: pointer;
+}
